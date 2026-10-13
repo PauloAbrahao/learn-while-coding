@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "eval-1-python-retry",
+  "prompt": "ativa o learning mode. Depois adiciona retry com backoff exponencial na fetch_orders do api_client.py, máximo 3 tentativas, só pra erros 5xx e timeout",
+  "assertions": [
+    "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+    "📝 explanation is 1-3 sentences",
+    "📝 names the technique used",
+    "🤔 is exactly one question, not answered after",
+    "No teaching comments added to code (comment count not above fixture)",
+    "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)"
+  ]
+}

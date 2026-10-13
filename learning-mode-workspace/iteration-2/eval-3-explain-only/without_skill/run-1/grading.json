@@ -1,0 +1,20 @@
+{
+  "expectations": [
+    {
+      "text": "No learning-mode footnote (no code was changed)",
+      "passed": true,
+      "evidence": "searched for 📝/🤔"
+    },
+    {
+      "text": "Code file unchanged",
+      "passed": true,
+      "evidence": "compared to fixture"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

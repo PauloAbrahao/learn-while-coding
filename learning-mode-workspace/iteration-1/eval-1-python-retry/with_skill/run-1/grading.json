@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+      "passed": true,
+      "evidence": "> *📝 O retry só vale para falhas **transitórias**: 5xx e timeout podem dar certo numa nova tentativa, já um 4xx vai falhar sempre do mesmo jeito. O backoff exponencial (0.5s, 1s) dobra a espera a cada falha, o que dá tempo para um servidor sobrecarregado se recuperar em vez de ser bombardeado.*\n> *🤔"
+    },
+    {
+      "text": "📝 explanation is 1-2 sentences and <=45 words",
+      "passed": false,
+      "evidence": "2 sentences, 51 words"
+    },
+    {
+      "text": "📝 names the technique used",
+      "passed": true,
+      "evidence": " O retry só vale para falhas **transitórias**: 5xx e timeout podem dar certo numa nova tentativa, já um 4xx vai falhar sempre do mesmo jeito. O backoff exponencial (0.5s, 1s) dobra a espera a cada fal"
+    },
+    {
+      "text": "🤔 is exactly one question, <=30 words, not answered after",
+      "passed": false,
+      "evidence": "37 words:  Se mil clientes recebem o mesmo 503 no mesmo instante e todos seguem exatamente esse backoff, o que acontece com o servidor quando chega a hora de tentar de novo, e o que faltaria para evitar isso?*"
+    },
+    {
+      "text": "No teaching comments added to code (comment count not above fixture)",
+      "passed": true,
+      "evidence": "fixture=0 output=0"
+    },
+    {
+      "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+      "passed": true,
+      "evidence": "headings checked"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.6666666666666666
+  }
+}

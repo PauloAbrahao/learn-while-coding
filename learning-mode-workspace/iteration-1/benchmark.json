@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "skill_name": "learning-mode",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-10-13T22:32:39Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 27.2,
+        "tokens": 42962,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Response ends with footnote (--- + blockquote with \ud83d\udcdd and \ud83e\udd14)",
+          "passed": true,
+          "evidence": "> *\ud83d\udcdd O retry s\u00f3 vale para falhas **transit\u00f3rias**: 5xx e timeout podem dar certo numa nova tentativa, j\u00e1 um 4xx vai falhar sempre do mesmo jeito. O backoff exponencial (0.5s, 1s) dobra a espera a cada falha, o que d\u00e1 tempo para um servidor sobrecarregado se recuperar em vez de ser bombardeado.*\n> *\ud83e\udd14"
+        },
+        {
+          "text": "\ud83d\udcdd explanation is 1-3 sentences",
+          "passed": true,
+          "evidence": "2 sentences"
+        },
+        {
+          "text": "\ud83d\udcdd names the technique used",
+          "passed": true,
+          "evidence": " O retry s\u00f3 vale para falhas **transit\u00f3rias**: 5xx e timeout podem dar certo numa nova tentativa, j\u00e1 um 4xx vai falhar sempre do mesmo jeito. O backoff exponencial (0.5s, 1s) dobra a espera a cada fal"
+        },
+        {
+          "text": "\ud83e\udd14 is exactly one question, not answered after",
+          "passed": true,
+          "evidence": " Se mil clientes recebem o mesmo 503 no mesmo instante e todos seguem exatamente esse backoff, o que acontece com o servidor quando chega a hora de tentar de novo, e o que faltaria para evitar isso?*"
+        },
+        {
+          "text": "No teaching comments added to code (comment count not above fixture)",
+          "passed": true,
+          "evidence": "fixture=0 output=0"
+        },
+        {
+          "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+          "passed": true,
+          "evidence": "headings checked"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8333333333333334,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 21.9,
+        "tokens": 42349,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Response ends with footnote (--- + blockquote with \ud83d\udcdd and \ud83e\udd14)",
+          "passed": true,
+          "evidence": "> *\ud83d\udcdd Troquei os ifs aninhados por guard clauses (early return). Cada caso em que n\u00e3o h\u00e1 desconto sai logo no topo, e as regras de desconto de verdade (gold \u2192 20%, total > 100 \u2192 10%) ficam no n\u00edvel mais raso, lidas de cima para baixo como uma tabela de prioridade. A ordem importa: o `gold` vem antes "
+        },
+        {
+          "text": "\ud83d\udcdd explanation is 1-3 sentences",
+          "passed": true,
+          "evidence": "3 sentences"
+        },
+        {
+          "text": "\ud83d\udcdd names the technique used",
+          "passed": true,
+          "evidence": " Troquei os ifs aninhados por guard clauses (early return). Cada caso em que n\u00e3o h\u00e1 desconto sai logo no topo, e as regras de desconto de verdade (gold \u2192 20%, total > 100 \u2192 10%) ficam no n\u00edvel mais ra"
+        },
+        {
+          "text": "\ud83e\udd14 is exactly one question, not answered after",
+          "passed": false,
+          "evidence": " Se a l\u00f3gica final \u00e9 a mesma, por que ler \"o que n\u00e3o serve\" primeiro deixa mais f\u00e1cil entender \"o que serve\"? E em que ponto essa sequ\u00eancia de returns come\u00e7aria a ficar t\u00e3o dif\u00edcil de ler quanto o ani"
+        },
+        {
+          "text": "No teaching comments added to code (comment count not above fixture)",
+          "passed": true,
+          "evidence": "fixture=0 output=0"
+        },
+        {
+          "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+          "passed": true,
+          "evidence": "headings checked"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 28.2,
+        "tokens": 43109,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "No learning-mode footnote (no code was changed)",
+          "passed": true,
+          "evidence": "searched for \ud83d\udcdd/\ud83e\udd14"
+        },
+        {
+          "text": "Code file unchanged",
+          "passed": true,
+          "evidence": "compared to fixture"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 6,
+        "total": 6,
+        "time_seconds": 47.5,
+        "tokens": 43361,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Response ends with footnote (--- + blockquote with \ud83d\udcdd and \ud83e\udd14)",
+          "passed": false,
+          "evidence": "no footnote found at end"
+        },
+        {
+          "text": "\ud83d\udcdd explanation is 1-3 sentences",
+          "passed": false,
+          "evidence": "0 sentences"
+        },
+        {
+          "text": "\ud83d\udcdd names the technique used",
+          "passed": false,
+          "evidence": ""
+        },
+        {
+          "text": "\ud83e\udd14 is exactly one question, not answered after",
+          "passed": false,
+          "evidence": ""
+        },
+        {
+          "text": "No teaching comments added to code (comment count not above fixture)",
+          "passed": false,
+          "evidence": "fixture=0 output=1"
+        },
+        {
+          "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+          "passed": false,
+          "evidence": "headings checked"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 6,
+        "total": 6,
+        "time_seconds": 44.4,
+        "tokens": 43138,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Response ends with footnote (--- + blockquote with \ud83d\udcdd and \ud83e\udd14)",
+          "passed": false,
+          "evidence": "no footnote found at end"
+        },
+        {
+          "text": "\ud83d\udcdd explanation is 1-3 sentences",
+          "passed": false,
+          "evidence": "0 sentences"
+        },
+        {
+          "text": "\ud83d\udcdd names the technique used",
+          "passed": false,
+          "evidence": ""
+        },
+        {
+          "text": "\ud83e\udd14 is exactly one question, not answered after",
+          "passed": false,
+          "evidence": ""
+        },
+        {
+          "text": "No teaching comments added to code (comment count not above fixture)",
+          "passed": false,
+          "evidence": "fixture=0 output=1"
+        },
+        {
+          "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+          "passed": false,
+          "evidence": "headings checked"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 53.5,
+        "tokens": 46511,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "No learning-mode footnote (no code was changed)",
+          "passed": true,
+          "evidence": "searched for \ud83d\udcdd/\ud83e\udd14"
+        },
+        {
+          "text": "Code file unchanged",
+          "passed": true,
+          "evidence": "compared to fixture"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9444,
+        "stddev": 0.0962,
+        "min": 0.8333,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 25.7667,
+        "stddev": 3.3858,
+        "min": 21.9,
+        "max": 28.2
+      },
+      "tokens": {
+        "mean": 42806.6667,
+        "stddev": 403.1083,
+        "min": 42349,
+        "max": 43109
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.3333,
+        "stddev": 0.5774,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 48.4667,
+        "stddev": 4.6264,
+        "min": 44.4,
+        "max": 53.5
+      },
+      "tokens": {
+        "mean": 44336.6667,
+        "stddev": 1886.3261,
+        "min": 43138,
+        "max": 46511
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.61",
+      "time_seconds": "-22.7",
+      "tokens": "-1530"
+    }
+  },
+  "notes": []
+}

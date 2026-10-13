@@ -1,0 +1,9 @@
+{
+  "eval_id": 3,
+  "eval_name": "eval-3-explain-only",
+  "prompt": "modo aprendizado ativado. me explica o que a função slugify em slugify.ts faz, linha por linha",
+  "assertions": [
+    "No learning-mode footnote (no code was changed)",
+    "Code file unchanged"
+  ]
+}

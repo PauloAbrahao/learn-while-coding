@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "eval-2-js-refactor",
+  "prompt": "learning mode on. refatora esse calculateDiscount em discount.js, tá ilegível com esse monte de if aninhado",
+  "assertions": [
+    "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+    "📝 explanation is 1-2 sentences and <=45 words",
+    "📝 names the technique used",
+    "🤔 is exactly one question, <=30 words, not answered after",
+    "No teaching comments added to code (comment count not above fixture)",
+    "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)"
+  ]
+}

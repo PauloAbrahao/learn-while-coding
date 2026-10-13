@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+      "passed": false,
+      "evidence": "no footnote found at end"
+    },
+    {
+      "text": "📝 explanation is 1-2 sentences and <=45 words",
+      "passed": false,
+      "evidence": "0 sentences, 0 words"
+    },
+    {
+      "text": "📝 names the technique used",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "🤔 is exactly one question, <=30 words, not answered after",
+      "passed": false,
+      "evidence": "0 words: "
+    },
+    {
+      "text": "No teaching comments added to code (comment count not above fixture)",
+      "passed": false,
+      "evidence": "fixture=0 output=1"
+    },
+    {
+      "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+      "passed": false,
+      "evidence": "headings checked"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 6,
+    "total": 6,
+    "pass_rate": 0.0
+  }
+}

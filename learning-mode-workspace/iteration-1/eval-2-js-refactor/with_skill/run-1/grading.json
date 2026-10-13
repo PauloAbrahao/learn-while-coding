@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+      "passed": true,
+      "evidence": "> *📝 Troquei os ifs aninhados por guard clauses (early return). Cada caso em que não há desconto sai logo no topo, e as regras de desconto de verdade (gold → 20%, total > 100 → 10%) ficam no nível mais raso, lidas de cima para baixo como uma tabela de prioridade. A ordem importa: o `gold` vem antes "
+    },
+    {
+      "text": "📝 explanation is 1-2 sentences and <=45 words",
+      "passed": false,
+      "evidence": "3 sentences, 71 words"
+    },
+    {
+      "text": "📝 names the technique used",
+      "passed": true,
+      "evidence": " Troquei os ifs aninhados por guard clauses (early return). Cada caso em que não há desconto sai logo no topo, e as regras de desconto de verdade (gold → 20%, total > 100 → 10%) ficam no nível mais ra"
+    },
+    {
+      "text": "🤔 is exactly one question, <=30 words, not answered after",
+      "passed": false,
+      "evidence": "41 words:  Se a lógica final é a mesma, por que ler \"o que não serve\" primeiro deixa mais fácil entender \"o que serve\"? E em que ponto essa sequência de returns começaria a ficar tão difícil de ler quanto o ani"
+    },
+    {
+      "text": "No teaching comments added to code (comment count not above fixture)",
+      "passed": true,
+      "evidence": "fixture=0 output=0"
+    },
+    {
+      "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+      "passed": true,
+      "evidence": "headings checked"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.6666666666666666
+  }
+}

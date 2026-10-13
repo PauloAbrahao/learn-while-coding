@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+      "passed": true,
+      "evidence": "> *📝 Envolvi a requisição num loop de retry com backoff exponencial: cada falha transitória (5xx/timeout) dobra a espera antes da próxima tentativa, e erros de cliente (4xx) falham na hora.*\n> *🤔 Por que faz sentido tentar de novo depois de um 503, mas não depois de um 400? O que cada um diz sobre d"
+    },
+    {
+      "text": "📝 explanation is 1-2 sentences and <=45 words",
+      "passed": true,
+      "evidence": "1 sentences, 29 words"
+    },
+    {
+      "text": "📝 names the technique used",
+      "passed": true,
+      "evidence": " Envolvi a requisição num loop de retry com backoff exponencial: cada falha transitória (5xx/timeout) dobra a espera antes da próxima tentativa, e erros de cliente (4xx) falham na hora.*"
+    },
+    {
+      "text": "🤔 is exactly one question, <=30 words, not answered after",
+      "passed": false,
+      "evidence": "28 words:  Por que faz sentido tentar de novo depois de um 503, mas não depois de um 400? O que cada um diz sobre de quem é a culpa?*"
+    },
+    {
+      "text": "No teaching comments added to code (comment count not above fixture)",
+      "passed": true,
+      "evidence": "fixture=0 output=0"
+    },
+    {
+      "text": "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)",
+      "passed": true,
+      "evidence": "headings checked"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

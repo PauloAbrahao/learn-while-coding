@@ -1,0 +1,49 @@
+{
+  "skill_name": "learning-mode",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ativa o learning mode. Depois adiciona retry com backoff exponencial na fetch_orders do api_client.py, máximo 3 tentativas, só pra erros 5xx e timeout",
+      "expected_output": "Código com retry implementado, sem comentários didáticos; resposta termina com nota de rodapé (📝 explicação curta citando backoff exponencial + 🤔 pergunta socrática sem resposta).",
+      "files": [
+        "learning-mode-workspace/fixtures/api_client.py"
+      ],
+      "assertions": [
+        "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+        "📝 explanation is 1-2 sentences and <=45 words",
+        "📝 names the technique used",
+        "🤔 is exactly one question, <=30 words, not answered after",
+        "No teaching comments added to code (comment count not above fixture)",
+        "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "learning mode on. refatora esse calculateDiscount em discount.js, tá ilegível com esse monte de if aninhado",
+      "expected_output": "Refatoração com guard clauses/early return, comportamento preservado; nota de rodapé no chat com conceito nomeado e pergunta aberta.",
+      "files": [
+        "learning-mode-workspace/fixtures/discount.js"
+      ],
+      "assertions": [
+        "Response ends with footnote (--- + blockquote with 📝 and 🤔)",
+        "📝 explanation is 1-2 sentences and <=45 words",
+        "📝 names the technique used",
+        "🤔 is exactly one question, <=30 words, not answered after",
+        "No teaching comments added to code (comment count not above fixture)",
+        "No extra tutorial sections (no 'learning'/'por que'/'para fixar' headings)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "modo aprendizado ativado. me explica o que a função slugify em slugify.ts faz, linha por linha",
+      "expected_output": "Explicação da função sem alterar código; NÃO deve haver nota de rodapé de learning mode porque nenhum código foi implementado/refatorado.",
+      "files": [
+        "learning-mode-workspace/fixtures/slugify.ts"
+      ],
+      "assertions": [
+        "No learning-mode footnote (no code was changed)",
+        "Code file unchanged"
+      ]
+    }
+  ]
+}
